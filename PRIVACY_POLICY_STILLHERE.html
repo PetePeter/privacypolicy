@@ -164,7 +164,7 @@
         <h3>2.3 Friendship &amp; Alert Data</h3>
         <ul>
             <li><strong>Friendships:</strong> We store which users are connected, escalation priority order, and whether monitoring is active in each direction. No personal details beyond user IDs.</li>
-            <li><strong>Alerts:</strong> When a welfare alert is triggered (by inactivity timeout or manually), a copy of your encrypted heartbeat history is attached to the alert so your friends can view your recent whereabouts.</li>
+            <li><strong>Alerts:</strong> When a welfare alert is triggered (by inactivity timeout or manually), a copy of your encrypted heartbeat history is attached to the alert so your friends can view your recent whereabouts. When the alert is resolved, the alert document and all attached data are permanently deleted. No alert history is retained.</li>
             <li><strong>Invitations:</strong> Invite links contain a cryptographic token. Invites expire after 7 days and can be revoked by the creator.</li>
         </ul>
 
@@ -234,7 +234,7 @@
         <p>Heartbeats older than your tier's retention window are automatically deleted each time a new heartbeat is uploaded.</p>
 
         <h3>4.2 Alerts</h3>
-        <p>When an alert is resolved (via check-in or dismissal), the alert document is immediately deleted from our servers and from your device.</p>
+        <p>When an alert is resolved (via check-in or dismissal), the alert document and all attached encrypted data are immediately and permanently deleted from our servers and from your device. No alert history is kept &mdash; resolved alerts cannot be retrieved.</p>
 
         <h3>4.3 Invitations</h3>
         <p>Invite tokens expire automatically after 7 days. Creators can revoke invites at any time.</p>
@@ -306,6 +306,7 @@
             <li>All sensor data encrypted with AES-256-GCM before leaving your device</li>
             <li>Only you and your chosen friends can decrypt your heartbeat data</li>
             <li>Heartbeat history automatically deleted after your tier's retention window</li>
+            <li>Resolved alerts are permanently deleted &mdash; no alert history is kept</li>
             <li>Account deletion permanently removes all your data</li>
             <li>No advertisements, no data sales, no data brokers</li>
             <li>No collection of names, phone numbers, physical addresses, or government IDs</li>
