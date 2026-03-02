@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Still Here - Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #4a6274;
+            margin-top: 20px;
+        }
+        .updated {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .highlight-box {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .highlight-box.warning {
+            border-left-color: #e67e22;
+            background-color: #fef5e7;
+        }
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .checklist li:before {
+            content: "\2713";
+            color: #27ae60;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .contact-info {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "Courier New", monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #34495e;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy for Still Here</h1>
+        <p class="updated"><strong>Last Updated:</strong> March 2, 2026 (v1)</p>
+
+        <h2>1. Introduction</h2>
+        <p>Still Here ("the App") is a welfare-check application that helps friends and family stay connected during periods of inactivity. Because the App collects sensitive data to fulfil this safety purpose, we take privacy extremely seriously. This Privacy Policy explains what we collect, how we protect it, and when we delete it.</p>
+
+        <div class="highlight-box">
+            <strong>Key principle:</strong> All sensitive sensor data (location, Bluetooth, WiFi, call log, device state) is encrypted on your device before it leaves your phone. We cannot read your encrypted data on our servers.
+        </div>
+
+        <h2>2. Information We Collect</h2>
+
+        <h3>2.1 Account Information</h3>
+        <p>When you create an account, we collect:</p>
+        <ul>
+            <li><strong>Email address</strong> &mdash; used for authentication and account recovery.</li>
+            <li><strong>Phone number</strong> (optional) &mdash; if you choose phone-based verification.</li>
+        </ul>
+        <p>We do not collect your name, physical address, or government-issued identifiers.</p>
+
+        <h3>2.2 Sensor Data (Heartbeats)</h3>
+        <p>Every 60 minutes, the App collects the following data and bundles it into an encrypted "heartbeat":</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data Type</th>
+                    <th>What We Collect</th>
+                    <th>Why</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Location</strong></td>
+                    <td>GPS coordinates, accuracy, altitude, speed, bearing</td>
+                    <td>Show your last known position during a welfare alert</td>
+                </tr>
+                <tr>
+                    <td><strong>Bluetooth devices</strong></td>
+                    <td>Device names, MAC addresses, signal strength</td>
+                    <td>Help identify your surroundings if location is unavailable</td>
+                </tr>
+                <tr>
+                    <td><strong>WiFi networks</strong></td>
+                    <td>Network names (SSID), access-point addresses (BSSID), signal strength, frequency</td>
+                    <td>Provide environmental context during a welfare alert</td>
+                </tr>
+                <tr>
+                    <td><strong>Call log</strong></td>
+                    <td>Last 10 calls: phone numbers, timestamps, duration, direction</td>
+                    <td>Help your emergency contacts understand your recent activity</td>
+                </tr>
+                <tr>
+                    <td><strong>Device state</strong></td>
+                    <td>Battery level, charging status, connection type, signal strength</td>
+                    <td>Determine whether your phone is reachable</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <strong>Encryption:</strong> All sensor data above is encrypted with AES-256-GCM on your device before upload. The encryption key is generated and stored locally. Only you and friends you have explicitly added can decrypt this data.
+        </div>
+
+        <h3>2.3 Friendship &amp; Alert Data</h3>
+        <ul>
+            <li><strong>Friendships:</strong> We store which users are connected, escalation priority order, and whether monitoring is active in each direction. No personal details beyond user IDs.</li>
+            <li><strong>Alerts:</strong> When a welfare alert is triggered (by inactivity timeout or manually), a copy of your encrypted heartbeat history is attached to the alert so your friends can view your recent whereabouts.</li>
+            <li><strong>Invitations:</strong> Invite links contain a cryptographic token. Invites expire after 7 days and can be revoked by the creator.</li>
+        </ul>
+
+        <h3>2.4 Device Permissions</h3>
+        <p>The App requests the following permissions. Each can be denied individually, though some features will be limited:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Permission</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Fine &amp; coarse location</td><td>GPS coordinates for heartbeats</td></tr>
+                <tr><td>Background location</td><td>Collect location while the App is in the background</td></tr>
+                <tr><td>Bluetooth scan &amp; connect</td><td>Discover nearby Bluetooth devices</td></tr>
+                <tr><td>WiFi state &amp; nearby devices</td><td>Scan nearby WiFi networks</td></tr>
+                <tr><td>Read call log</td><td>Include recent call activity in heartbeats</td></tr>
+                <tr><td>Phone state</td><td>Determine cellular signal strength</td></tr>
+                <tr><td>Camera</td><td>Scan QR codes for friend invitations (no photos are captured or stored)</td></tr>
+                <tr><td>Notifications</td><td>Deliver welfare alerts and status updates</td></tr>
+                <tr><td>Biometrics</td><td>Optional app-lock via fingerprint or face</td></tr>
+            </tbody>
+        </table>
+
+        <h3>2.5 What We Do NOT Collect</h3>
+        <ul>
+            <li>We do not collect your name, physical address, or government ID.</li>
+            <li>We do not display advertisements or collect advertising identifiers.</li>
+            <li>We do not sell, rent, or trade your data to any third party.</li>
+            <li>We do not read the content of your messages, emails, or other communications.</li>
+        </ul>
+
+        <h2>3. How We Protect Your Data</h2>
+
+        <h3>3.1 End-to-End Encryption</h3>
+        <p>All heartbeat sensor data is encrypted on your device using <strong>AES-256-GCM</strong> before being uploaded. The symmetric encryption key is stored in your device's hardware-backed Android KeyStore and never leaves your phone in plaintext.</p>
+        <p>When you add a friend, your encryption key is wrapped using <strong>ECIES</strong> (Elliptic Curve Integrated Encryption Scheme with P-256) so that only that specific friend can decrypt your heartbeat data. We (the developers) cannot decrypt your sensor data on our servers.</p>
+
+        <h3>3.2 Local Key Storage</h3>
+        <p>Authentication tokens and encryption keys stored on your device are protected with <strong>AES-256-GCM EncryptedSharedPreferences</strong>, backed by the Android KeyStore. This data is not included in device backups.</p>
+
+        <h3>3.3 Server-Side Protections</h3>
+        <ul>
+            <li><strong>Firebase App Check</strong> (Play Integrity) ensures only the genuine, unmodified App can access our backend services.</li>
+            <li><strong>Firestore security rules</strong> restrict document access to authorised users only.</li>
+            <li>Tier and billing fields on your user profile can only be written by our server-side Cloud Functions, not by the App directly.</li>
+        </ul>
+
+        <h2>4. Data Retention &amp; Deletion</h2>
+
+        <h3>4.1 Heartbeat History</h3>
+        <p>Encrypted heartbeat snapshots are automatically pruned based on your subscription tier:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tier</th>
+                    <th>Retention Window</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Free</td><td>6 hours</td></tr>
+                <tr><td>Standard</td><td>24 hours</td></tr>
+                <tr><td>Premium</td><td>48 hours</td></tr>
+            </tbody>
+        </table>
+        <p>Heartbeats older than your tier's retention window are automatically deleted each time a new heartbeat is uploaded.</p>
+
+        <h3>4.2 Alerts</h3>
+        <p>When an alert is resolved (via check-in or dismissal), the alert document is immediately deleted from our servers and from your device.</p>
+
+        <h3>4.3 Invitations</h3>
+        <p>Invite tokens expire automatically after 7 days. Creators can revoke invites at any time.</p>
+
+        <h3>4.4 Account Deletion</h3>
+        <p>You can delete your account at any time from the App's settings. Account deletion permanently removes:</p>
+        <ul>
+            <li>Your user profile and authentication credentials</li>
+            <li>All friendship records in both directions</li>
+            <li>All alerts you are involved in</li>
+            <li>All pending invitations you created</li>
+            <li>Your heartbeat history</li>
+            <li>Your FCM push notification token</li>
+        </ul>
+        <p>This action is irreversible. Local data (Room database, encrypted preferences) is cleared on the device where deletion is initiated.</p>
+
+        <h2>5. In-App Purchases</h2>
+        <ul>
+            <li>The App offers optional subscription tiers (Standard and Premium) that increase friend limits and heartbeat history retention.</li>
+            <li>Purchases are processed by <strong>Google Play Billing</strong> and are subject to Google's privacy policy.</li>
+            <li>We do not receive or store your payment card details. We receive only a purchase token from Google Play, which we use to verify the transaction.</li>
+            <li>Subscriptions are <strong>not</strong> shared via Google Play Family Library.</li>
+        </ul>
+
+        <h2>6. Third-Party Services</h2>
+        <p>The App uses the following third-party services, each governed by their own privacy policies:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Provider</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Firebase Authentication</td><td>Google</td><td>Email and phone sign-in</td></tr>
+                <tr><td>Cloud Firestore</td><td>Google</td><td>Encrypted data storage and sync</td></tr>
+                <tr><td>Firebase Cloud Messaging</td><td>Google</td><td>Push notifications for alerts</td></tr>
+                <tr><td>Firebase Crashlytics</td><td>Google</td><td>Crash reports (device model, OS version, stack traces &mdash; no personal data)</td></tr>
+                <tr><td>Firebase Analytics</td><td>Google</td><td>Anonymous usage statistics (screen views, app events)</td></tr>
+                <tr><td>Google Play Billing</td><td>Google</td><td>Subscription purchases</td></tr>
+                <tr><td>Google Maps</td><td>Google</td><td>Display location on alert cards (coordinates sent to Maps API on user action only)</td></tr>
+            </tbody>
+        </table>
+        <p>We do not share your data with advertisers, data brokers, or any parties beyond those listed above.</p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>The App is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+
+        <h2>8. Your Rights</h2>
+        <ul>
+            <li><strong>Access:</strong> You can view all data the App holds about you from within the App (profile, friends, alerts, heartbeats).</li>
+            <li><strong>Deletion:</strong> You can delete your account and all associated data at any time from Settings.</li>
+            <li><strong>Portability:</strong> Alert data can be exported as a text share-card from the alert detail screen.</li>
+            <li><strong>Withdraw consent:</strong> You can revoke any device permission at any time through your device settings. The App will continue to function with reduced capability.</li>
+        </ul>
+
+        <h2>9. Contact Us</h2>
+        <div class="contact-info">
+            <p>If you have questions about this Privacy Policy or our privacy practices, please contact us at:</p>
+            <p><strong><a href="mailto:privacy@potatomotato.com">privacy@potatomotato.com</a></strong></p>
+        </div>
+
+        <h2>10. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this policy. We encourage you to review this policy periodically.</p>
+
+        <h2>Privacy Commitment Summary</h2>
+        <ul class="checklist">
+            <li>All sensor data encrypted with AES-256-GCM before leaving your device</li>
+            <li>Only you and your chosen friends can decrypt your heartbeat data</li>
+            <li>Heartbeat history automatically deleted after your tier's retention window</li>
+            <li>Account deletion permanently removes all your data</li>
+            <li>No advertisements, no data sales, no data brokers</li>
+            <li>No collection of names, physical addresses, or government IDs</li>
+            <li>Crash reports contain no personally identifiable information</li>
+            <li>Camera used only for QR code scanning &mdash; no photos captured or stored</li>
+            <li>In-app purchase details handled entirely by Google Play</li>
+        </ul>
+
+    </div>
+</body>
+</html>
